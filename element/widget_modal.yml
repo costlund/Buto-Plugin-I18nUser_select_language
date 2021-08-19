@@ -1,0 +1,53 @@
+-
+  type: div
+  attribute:
+    id: plugin_i18n_user_select_language_modal
+    role: dialog
+    class: 'modal fade modal-fullscreen show'
+    aria-modal: 'true'
+  innerHTML:
+    -
+      type: div
+      attribute:
+        class: modal-dialog
+      innerHTML:
+        -
+          type: div
+          attribute:
+            class: modal-content
+          innerHTML:
+            -
+              type: div
+              attribute:
+                class: modal-header
+              innerHTML:
+                -
+                  type: h4
+                  attribute:
+                    class: modal-title
+                  innerHTML: Language
+                -
+                  type: button
+                  attribute:
+                    type: button
+                    class: close
+                    style: 'margin-left:0px'
+                    data-dismiss: modal
+                  innerHTML:
+                    -
+                      type: img
+                      attribute:
+                        src: /plugin/icons/octicons/build/svg/x.svg
+            -
+              type: div
+              attribute:
+                class: modal-body
+              innerHTML:
+                -
+                  type: div
+                  innerHTML: rs:list_group
+            -
+              type: div
+              attribute:
+                class: modal-footer
+                style: 'display:block'
