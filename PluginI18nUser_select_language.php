@@ -17,7 +17,7 @@ class PluginI18nUser_select_language{
         $innerHTML .= ' <img src="/plugin/icons/octicons/build/svg/check.svg">';
       }
       $onclick = "PluginI18nUser_select_language.click(this)";
-      $list_group_item[] = wfDocument::createHtmlElement('a', $innerHTML, array('class' => 'list-group-item list-group-item-action', 'onclick' => $onclick, 'data-value' => $v));
+      $list_group_item[] = wfDocument::createHtmlElement('a', $innerHTML, array('class' => 'list-group-item list-group-item-action', 'onclick' => $onclick, 'data-value' => $v), array('i18n' => false));
     }
     $list_group->set('innerHTML', $list_group_item);
     return $list_group->get();
