@@ -8,7 +8,7 @@ Include script in head.
 ```
 type: widget
 data:
-  plugin: i18n/user_select_langauge
+  plugin: i18n/user_select_language
   method: include
 ```
 
@@ -18,7 +18,7 @@ In this modal window user can change language.
 ```
 type: widget
 data:
-  plugin: i18n/user_select_langauge
+  plugin: i18n/user_select_language
   method: modal
 ```
 
@@ -43,5 +43,5 @@ plugin:
 ## Javascript
 Run this script to show the modal with languages.
 ```
-PluginI18nUser_select_langauge.modal();
+PluginI18nUser_select_language.modal();
 ```
