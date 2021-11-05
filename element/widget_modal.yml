@@ -1,5 +1,10 @@
 -
   type: div
+  settings:
+    globals:
+      -
+        path_to_key: 'settings/plugin/i18n/translate_v1/settings/path'
+        value: '/plugin/i18n/user_select_language/i18n'
   attribute:
     id: plugin_i18n_user_select_language_modal
     role: dialog
