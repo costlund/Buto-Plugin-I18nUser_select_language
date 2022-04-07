@@ -1,16 +1,20 @@
-version: 1.1.0
+version: 1.1.1
 history:
+  1.1.1:
+    date: '2022-04-07'
+    title: Versions
+    description: 'Versions update.'
   1.1.0:
     date: '2022-04-07'
-    title: 'Flags'
+    title: Flags
     description: 'Add flags.'
   1.0.2:
     date: '2021-11-05'
-    title: 'I18N'
+    title: I18N
     description: 'Add translation.'
   1.0.1:
     date: '2021-08-25'
-    title: 'Typos'
+    title: Typos
     description: 'Typos in readme file.'
   1.0.0:
     date: '2021-08-19'
@@ -19,13 +23,13 @@ history:
 plugin:
   -
     name: wf/mysql
-    version: 1.14.1
+    version: 1.14.6
   -
     name: wf/embed
     version: 1.1.1
   -
     name: flags/lipis_6_1_1
-    version: 1.0.0
+    version: 1.1.0
 sys:
   -
     name: mercury
