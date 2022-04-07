@@ -56,3 +56,8 @@
               attribute:
                 class: modal-footer
                 style: 'display:block'
+-
+  type: script
+  settings: 
+    enabled: rs:show
+  innerHTML: PluginI18nUser_select_language.modal();

@@ -21,6 +21,11 @@ data:
   plugin: i18n/user_select_language
   method: modal
 ```
+To show modal on page load.
+```
+  data:
+    show: true
+```
 
 ## Page language
 This page handle language via ajax request.
@@ -45,3 +50,6 @@ Run this script to show the modal with languages.
 ```
 PluginI18nUser_select_language.modal();
 ```
+
+## Flags
+Plugin flags/lipis_6_1_1 must have include widget on the page to show flags.

@@ -1,5 +1,9 @@
-version: 1.0.2
+version: 1.1.0
 history:
+  1.1.0:
+    date: '2022-04-07'
+    title: 'Flags'
+    description: 'Add flags.'
   1.0.2:
     date: '2021-11-05'
     title: 'I18N'
@@ -19,6 +23,9 @@ plugin:
   -
     name: wf/embed
     version: 1.1.1
+  -
+    name: flags/lipis_6_1_1
+    version: 1.0.0
 sys:
   -
     name: mercury

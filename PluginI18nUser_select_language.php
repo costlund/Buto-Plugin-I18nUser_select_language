@@ -10,23 +10,29 @@ class PluginI18nUser_select_language{
     $language = wfI18n::getLanguage();
     $list_group = wfDocument::createHtmlElementAsObject('div', null, array('class' => 'list-group'));
     $list_group_item = array();
-    $languages = wfI18n::getLanguages();
+    $languages = wfI18n::getLanguagesMore();
+    wfPlugin::includeonce('flags/lipis_6_1_1');
+    $lipis = new PluginFlagsLipis_6_1_1();
     foreach($languages as $v){
-      $innerHTML = $v;
-      if($v==$language){
-        $innerHTML .= ' <img src="/plugin/icons/octicons/build/svg/check.svg">';
+      $i = new PluginWfArray($v);
+      $flag = $lipis->getFlagElement($i->get('name'));
+      $span = wfDocument::createHtmlElement('span', $i->get('label'));
+      $active = null;
+      if($i->get('name')==$language){
+        $active = ' active';
       }
       $onclick = "PluginI18nUser_select_language.click(this)";
-      $list_group_item[] = wfDocument::createHtmlElement('a', $innerHTML, array('class' => 'list-group-item list-group-item-action', 'onclick' => $onclick, 'data-value' => $v), array('i18n' => false));
+      $list_group_item[] = wfDocument::createHtmlElement('a', array($flag, $span), array('class' => 'list-group-item list-group-item-action'.$active, 'onclick' => $onclick, 'data-value' => $i->get('name')), array('i18nzzz' => false));
     }
     $list_group->set('innerHTML', $list_group_item);
     return $list_group->get();
   }
-  public function widget_modal(){
+  public function widget_modal($data){
     /**
      * data
      */
-    $data = new PluginWfArray();
+    $data = new PluginWfArray($data);
+    $data = new PluginWfArray($data->get('data'));
     /**
      * widget
      */
@@ -38,7 +44,7 @@ class PluginI18nUser_select_language{
     /**
      * widget data
      */
-    $widget->setByTag($data->get());
+    $widget->setByTag($data->get(), 'rs', true);
     /**
      *
      */
