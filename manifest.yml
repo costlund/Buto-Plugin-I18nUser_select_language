@@ -1,5 +1,9 @@
-version: 1.1.1
+version: 1.1.2
 history:
+  1.1.2:
+    date: '2022-05-02'
+    title: Versions
+    description: 'Versions update.'
   1.1.1:
     date: '2022-04-07'
     title: Versions
@@ -29,7 +33,7 @@ plugin:
     version: 1.1.1
   -
     name: flags/lipis_6_1_1
-    version: 1.1.0
+    version: 1.2.0
 sys:
   -
     name: mercury
