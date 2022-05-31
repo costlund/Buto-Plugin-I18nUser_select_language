@@ -51,6 +51,14 @@ Run this script to show the modal with languages.
 PluginI18nUser_select_language.modal();
 ```
 
+## Button
+One could add a class to a button and innerHTML will change to the selected language from modal window.
+```
+innerHTML: My Language Button
+attribute:
+  class: plugin_i18n_user_select_language_button
+```
+
 ## Flags
 Plugin flags/lipis_6_1_1 must have include widget on the page to show flags.
 

@@ -8,5 +8,8 @@ function PluginI18nUser_select_language(){
       window.location = '/';
     });    
   }
+  this.set_button = function(){
+    $(".plugin_i18n_user_select_language_button span").html( $(".plugin_i18n_user_select_language_item.active").html() );    
+  }
 }
 var PluginI18nUser_select_language = new PluginI18nUser_select_language();

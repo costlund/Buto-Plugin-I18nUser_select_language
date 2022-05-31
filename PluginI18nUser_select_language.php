@@ -22,7 +22,7 @@ class PluginI18nUser_select_language{
         $active = ' active';
       }
       $onclick = "PluginI18nUser_select_language.click(this)";
-      $list_group_item[] = wfDocument::createHtmlElement('a', array($flag, $span), array('class' => 'list-group-item list-group-item-action'.$active, 'onclick' => $onclick, 'data-value' => $i->get('name')), array('i18nzzz' => false));
+      $list_group_item[] = wfDocument::createHtmlElement('a', array($flag, $span), array('class' => 'plugin_i18n_user_select_language_item list-group-item list-group-item-action'.$active, 'onclick' => $onclick, 'data-value' => $i->get('name')), array('i18nzzz' => false));
     }
     $list_group->set('innerHTML', $list_group_item);
     return $list_group->get();

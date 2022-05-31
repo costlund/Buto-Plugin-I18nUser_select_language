@@ -61,3 +61,6 @@
   settings: 
     enabled: rs:show
   innerHTML: PluginI18nUser_select_language.modal();
+-
+  type: script
+  innerHTML: PluginI18nUser_select_language.set_button();
