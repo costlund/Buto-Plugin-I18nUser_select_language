@@ -1,5 +1,9 @@
-version: 1.1.4
+version: 1.2.0
 history:
+  1.2.0:
+    date: '2022-05-31'
+    title: Link item
+    description: 'When using plugin bootstrap/navbar_v1 one could use param item_method to call method set_link_item. This will transform a dropdown link to a language selector.'
   1.1.4:
     date: '2022-05-26'
     title: I18N

@@ -53,3 +53,19 @@ PluginI18nUser_select_language.modal();
 
 ## Flags
 Plugin flags/lipis_6_1_1 must have include widget on the page to show flags.
+
+## Link item
+When using plugin bootstrap/navbar_v1 one could use param item_method to call method set_link_item.
+This will transform a dropdown link to a language selector.
+```
+type: dropdown
+text: _current_language_
+item_method:
+  plugin: i18n/user_select_language
+  method: set_link_item
+```
+Links example.
+```
+/sv
+/en
+```

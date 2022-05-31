@@ -86,4 +86,37 @@ class PluginI18nUser_select_language{
       $mysql->execute($sql->get());
     }
   }
+  public function set_link_item($data){
+    $data = new PluginWfArray($data);
+    $language = wfI18n::getLanguage();
+    $languages = wfI18n::getLanguagesMore();
+    $language_lable = null;
+    foreach($languages as $v){
+      $i = new PluginWfArray($v);
+      if($i->get('name')==$language){
+        $language_lable = $i->get('label');
+        break;
+      }
+    }
+    wfPlugin::includeonce('flags/lipis_6_1_1');
+    $lipis = new PluginFlagsLipis_6_1_1();
+    /**
+     * Dropdown label
+     */
+    $flag = $lipis->getFlagElement($language);
+    $span = wfDocument::createHtmlElement('span', $language_lable);
+    $data->set('text', array($flag, $span));
+    /**
+     * item
+     */
+    $item = array();
+    foreach($languages as $v){
+      $i = new PluginWfArray($v);
+      $flag = $lipis->getFlagElement($i->get('name'));
+      $span = wfDocument::createHtmlElement('span', $i->get('label'));
+      $item[] = array('text' => array($flag, $span), 'href' => '/'.$i->get('name'), 'settings' => array('i18n_url_rewrite_omit' => true));
+    }
+    $data->set('item', $item);
+    return $data->get();
+  }
 }
