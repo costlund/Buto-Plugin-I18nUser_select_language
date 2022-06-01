@@ -104,7 +104,7 @@ class PluginI18nUser_select_language{
      * Dropdown label
      */
     $flag = $lipis->getFlagElement($language);
-    $span = wfDocument::createHtmlElement('span', $language_lable);
+    $span = wfDocument::createHtmlElement('span', $language_lable, array('style' => 'margin-left:3px'));
     $data->set('text', array($flag, $span));
     /**
      * item
@@ -113,7 +113,7 @@ class PluginI18nUser_select_language{
     foreach($languages as $v){
       $i = new PluginWfArray($v);
       $flag = $lipis->getFlagElement($i->get('name'));
-      $span = wfDocument::createHtmlElement('span', $i->get('label'));
+      $span = wfDocument::createHtmlElement('span', $i->get('label'), array('style' => 'margin-left:3px'));
       $item[] = array('text' => array($flag, $span), 'href' => '/'.$i->get('name'), 'settings' => array('i18n_url_rewrite_omit' => true));
     }
     $data->set('item', $item);
