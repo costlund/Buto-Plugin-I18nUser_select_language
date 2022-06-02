@@ -88,6 +88,19 @@ class PluginI18nUser_select_language{
   }
   public function set_link_item($data){
     $data = new PluginWfArray($data);
+    /**
+     * i18n settings
+     */
+    $i18n_settings = new PluginWfArray();
+    $i18n_settings->set('path_to_key', 'settings/plugin/i18n/translate_v1/settings/path');
+    $i18n_settings->set('value', '/plugin/i18n/user_select_language/i18n');
+    /**
+     * 
+     */
+    $data->set('settings/globals/', $i18n_settings->get());
+    /**
+     * 
+     */
     $language = wfI18n::getLanguage();
     $languages = wfI18n::getLanguagesMore();
     $language_lable = null;
@@ -113,7 +126,7 @@ class PluginI18nUser_select_language{
     foreach($languages as $v){
       $i = new PluginWfArray($v);
       $flag = $lipis->getFlagElement($i->get('name'));
-      $span = wfDocument::createHtmlElement('span', $i->get('label'));
+      $span = wfDocument::createHtmlElement('span', $i->get('label'), array(), array('globals' => array($i18n_settings->get())));
       $item[] = array('text' => array($flag, $span), 'href' => '/'.$i->get('name'), 'settings' => array('i18n_url_rewrite_omit' => true));
     }
     $data->set('item', $item);
