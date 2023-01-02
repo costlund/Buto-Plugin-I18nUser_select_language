@@ -1,5 +1,9 @@
-version: 1.4.0
+version: 1.4.1
 history:
+  1.4.1:
+    date: '2023-01-02'
+    title: Versions
+    description: 'Versions update.'
   1.4.0:
     date: '2022-05-31'
     title: I18N
@@ -14,7 +18,7 @@ history:
     description: 'One could add a class to a button and innerHTML will change to the selected language from modal window.'
   1.2.0:
     date: '2022-05-31'
-    title: Link item
+    title: 'Link item'
     description: 'When using plugin bootstrap/navbar_v1 one could use param item_method to call method set_link_item. This will transform a dropdown link to a language selector.'
   1.1.4:
     date: '2022-05-26'
@@ -51,7 +55,7 @@ history:
 plugin:
   -
     name: wf/mysql
-    version: 1.14.6
+    version: 1.15.0
   -
     name: wf/embed
     version: 1.1.1
