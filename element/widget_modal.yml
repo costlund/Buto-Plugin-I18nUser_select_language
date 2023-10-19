@@ -35,14 +35,10 @@
                   type: button
                   attribute:
                     type: button
-                    class: close
-                    style: 'margin-left:0px'
-                    data-dismiss: modal
-                  innerHTML:
-                    -
-                      type: img
-                      attribute:
-                        src: /plugin/icons/octicons/build/svg/x.svg
+                    class: btn-close close
+                    style: 
+                      margin-left: 0px
+                    data-bs-dismiss: modal
             -
               type: div
               attribute:
